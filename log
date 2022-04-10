@@ -20,3 +20,14 @@ Sun Apr 10 19:27:15 HSP 2022:
  tests:  1|5
 total_score: 10/70
 8aef015
+Sun Apr 10 19:31:17 HSP 2022: 
+ hashmap.c | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:43:10: error: variable 'posicionDelMapa' set but not used [-Werror=unused-but-set-variable]
+     long posicionDelMapa, valorHash;
+          ^~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8b5fc6d

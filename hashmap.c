@@ -10,7 +10,7 @@ typedef struct HashMap HashMap;
 int enlarge_called=0;
 
 struct HashMap {
-    Pair ** buckets;
+    Pair ** buckets; //arreglo de pares
     long size; //cantidad de datos/pairs en la tabla
     long capacity; //capacidad de la tabla
     long current; //indice del ultimo dato accedido
@@ -40,8 +40,19 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-
-}
+    long posicionDelMapa, valorHash;
+    posicionDelMapa = map->current;
+    
+    valorHash = hash(key, map->capacity);
+    if (is_equal(key, map->buckets[valorHash]->key)!= 1 || map->buckets[valorHash]->key == NULL || map->buckets[valorHash]->value == NULL)
+    {
+        map->buckets[valorHash]->key = key;
+        map->buckets[valorHash]->value = value;
+        map->current = valorHash;
+    }
+    else
+        valorHash++;
+    }
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
