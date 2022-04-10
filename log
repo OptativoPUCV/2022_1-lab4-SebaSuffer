@@ -76,3 +76,12 @@ hashmap.c:43:10: error: variable 'posicionDelMapa' set but not used [-Werror=unu
 cc1.exe: all warnings being treated as errors
 Compilation failed
 3334ef8
+Sun Apr 10 19:32:27 HSP 2022: 
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:43:10: error: variable 'posicionDelMapa' set but not used [-Werror=unused-but-set-variable]
+     long posicionDelMapa, valorHash;
+          ^~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+bae6faa
