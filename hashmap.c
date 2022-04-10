@@ -43,14 +43,14 @@ void insertMap(HashMap * map, char * key, void * value) {
     long valorHash, i;
     
     valorHash = hash(key, map->capacity); 
-    for (i = 0; i < map->size; i++)
+    for (i = 0; i < map->capacity; i++)
     {
         if (is_equal(key, map->buckets[valorHash]->key)== 0 || map->buckets[valorHash]->key == NULL || map->buckets[valorHash]->value == NULL)
         {
             map->buckets[valorHash]->key = key;
             map->buckets[valorHash]->value = value;
             map->current = valorHash;
-            map->size++;
+            map->capacity++;
         }
         else{
             valorHash++;
