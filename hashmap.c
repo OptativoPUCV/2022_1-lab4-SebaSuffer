@@ -63,8 +63,10 @@ void insertMap(HashMap * map, char * key, void * value) {
                 map->size++;                
                 break;
             }
-            else
-                valorHash = hash(key, map->capacity)+1;
+            else{
+                valorHash = (1+valorHash) % map->capacity;
+            }
+                
         }
     }  
 }
