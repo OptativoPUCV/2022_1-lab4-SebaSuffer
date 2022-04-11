@@ -175,3 +175,14 @@ Sun Apr 10 21:42:57 HSP 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 fdb602b
+Sun Apr 10 21:54:40 HSP 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:59:30: error: 'i' undeclared (first use in this function)
+                 map->buckets[i] = (Pair **) malloc (sizeof(Pair *));
+                              ^
+hashmap.c:59:30: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+120cdff
