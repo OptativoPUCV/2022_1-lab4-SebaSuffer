@@ -159,3 +159,14 @@ hashmap.c:57:29: error: 'i' may be used uninitialized in this function [-Werror=
 cc1.exe: all warnings being treated as errors
 Compilation failed
 34aab41
+Sun Apr 10 21:42:41 HSP 2022: 
+ hashmap.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:43:21: error: unused variable 'i' [-Werror=unused-variable]
+     long valorHash, i;
+                     ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ac7568a
