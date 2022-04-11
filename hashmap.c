@@ -94,20 +94,28 @@ HashMap * createMap(long capacity) {
 void eraseMap(HashMap * map,  char * key) {    
     long valorHash, i;
     valorHash = hash(key, map->capacity);
-    if (map->buckets[valorHash]->key == NULL)
+    if (map->buckets[valorHash]->key == NULL){
+        map->size--;
         return;
-    if (is_equal(map->buckets[valorHash]->key, key) == 1)
+    }
+        
+    if (is_equal(map->buckets[valorHash]->key, key) == 1){
         map->buckets[valorHash]->key = NULL;
+        map->size--;
+    }
     else{
         for (i = 0; i < map->capacity; i++)
         {
             if (is_equal(key, map->buckets[valorHash]->key) == 1)
             {
                 map->buckets[valorHash]->key = NULL;
+                map->size--;
                 break;
             }
-            if (map->buckets[valorHash]->key == NULL)
+            if (map->buckets[valorHash]->key == NULL){
+                map->size--;
                 return;
+            }
             valorHash = (1+valorHash) % map->capacity;     
         }
     }  
