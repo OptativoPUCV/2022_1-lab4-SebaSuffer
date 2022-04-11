@@ -482,3 +482,14 @@ Mon Apr 11 00:02:24 HSP 2022:
  tests:  8|3
 total_score: 40/70
 c36919c
+Mon Apr 11 00:08:08 HSP 2022: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:95:21: error: unused variable 'i' [-Werror=unused-variable]
+     long valorHash, i;
+                     ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+e3e14a2
