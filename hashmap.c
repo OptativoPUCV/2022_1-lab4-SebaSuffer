@@ -92,7 +92,7 @@ HashMap * createMap(long capacity) {
 
 
 void eraseMap(HashMap * map,  char * key) {    
-    long valorHash, i;
+    /*long valorHash, i;
     valorHash = hash(key, map->capacity);
     if (map->buckets[valorHash]->key == NULL){
         return;
@@ -116,7 +116,8 @@ void eraseMap(HashMap * map,  char * key) {
             }
             valorHash = (1+valorHash) % map->capacity;     
         }
-    }  
+    } */
+    return NULL; 
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
