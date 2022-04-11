@@ -52,7 +52,7 @@ void insertMap(HashMap * map, char * key, void * value) {
             map->size++;
         }
     else{
-        while (map->buckets[valorHash] != NULL)
+        while (map->buckets[valorHash] != NULL || map->buckets[valorHash]->key != NULL)
         {
             if (is_equal(key, map->buckets[valorHash]->key) == 1)
                 return;
