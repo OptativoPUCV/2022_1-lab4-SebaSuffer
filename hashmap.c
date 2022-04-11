@@ -113,7 +113,6 @@ void eraseMap(HashMap * map,  char * key) {
                 break;
             }
             if (map->buckets[valorHash]->key == NULL){
-                map->size--;
                 return;
             }
             valorHash = (1+valorHash) % map->capacity;     
