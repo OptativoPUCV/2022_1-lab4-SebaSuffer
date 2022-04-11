@@ -288,3 +288,8 @@ Sun Apr 10 22:55:50 HSP 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 f0833c5
+Sun Apr 10 23:01:07 HSP 2022: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+ tests:  0|0
+a0fa025
