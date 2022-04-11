@@ -103,8 +103,9 @@ Pair * searchMap(HashMap * map,  char * key) {
 
     if (is_equal(map->buckets[valorHash]->key, key) == 1)
         {
-            return map->buckets[valorHash];
             map->current = valorHash;
+            return map->buckets[valorHash];
+            
         }
     else{
         while (map->buckets[valorHash] != NULL && map->buckets[valorHash]->key != NULL)
