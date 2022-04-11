@@ -62,7 +62,7 @@ void insertMap(HashMap * map, char * key, void * value) {
                 map->capacity++;
             }
             else{
-                valorHash++;
+                valorHash = hash(key, map->capacity)+1;
             }
         }
     }  
