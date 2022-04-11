@@ -50,6 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
             map->buckets[valorHash]->value = value;
             map->current = valorHash;
             map->capacity++;
+            map->size++;
         }
     else{
         while (map->buckets != NULL)
@@ -61,6 +62,7 @@ void insertMap(HashMap * map, char * key, void * value) {
                 map->buckets[valorHash]->value = value;
                 map->current = valorHash;
                 map->capacity++;
+                map->size++;
                 break;
             }
             else
