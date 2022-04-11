@@ -416,3 +416,9 @@ hashmap.c:112:8: note: declared here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 4a93e60
+Sun Apr 10 23:50:56 HSP 2022: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  8|3
+total_score: 40/70
+f69c8cb
