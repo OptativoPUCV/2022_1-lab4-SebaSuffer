@@ -148,3 +148,14 @@ Sun Apr 10 21:25:17 HSP 2022:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 191603c
+Sun Apr 10 21:40:58 HSP 2022: 
+ hashmap.c | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+test.c: In function 'insertMap':
+hashmap.c:57:29: error: 'i' may be used uninitialized in this function [-Werror=maybe-uninitialized]
+             if (map->buckets[i]->key == NULL || map->buckets[i]->value == NULL)
+                             ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+34aab41

@@ -52,9 +52,9 @@ void insertMap(HashMap * map, char * key, void * value) {
             map->capacity++;
         }
     else{
-        for (i = valorHash; i < map->capacity; i++)
+        while (map->buckets != NULL)
         {
-            if (is_equal(key, map->buckets[i]->key)== 0 || map->buckets[i]->key == NULL || map->buckets[i]->value == NULL)
+            if (map->buckets[i]->key == NULL || map->buckets[i]->value == NULL)
             {
                 map->buckets = (Pair **) malloc (sizeof(Pair *));
                 map->buckets[i]->key = key;
@@ -62,9 +62,6 @@ void insertMap(HashMap * map, char * key, void * value) {
                 map->current = valorHash;
                 map->capacity++;
                 break;
-            }
-            else{
-                valorHash = hash(key, map->capacity)+1;
             }
         }
     }  
