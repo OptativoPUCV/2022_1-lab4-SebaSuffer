@@ -304,3 +304,23 @@ Sun Apr 10 23:10:55 HSP 2022:
  tests:  5|4
 total_score: 30/70
 3fb8802
+Sun Apr 10 23:23:02 HSP 2022: 
+ hashmap.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:107:26: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+             map->current = map->buckets[valorHash];
+                          ^
+hashmap.c:113:30: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+                 map->current = map->buckets[valorHash];
+                              ^
+hashmap.c:112:13: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+             if (is_equal(key, map->buckets[valorHash]->key) == 1)
+             ^~
+hashmap.c:114:17: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+                 return map->buckets[valorHash];
+                 ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+0636b92
