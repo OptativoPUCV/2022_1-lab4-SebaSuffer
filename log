@@ -396,3 +396,23 @@ Sun Apr 10 23:45:48 HSP 2022:
  tests:  8|3
 total_score: 40/70
 727c425
+Sun Apr 10 23:50:12 HSP 2022: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:118:9: error: 'return' with no value, in function returning non-void [-Werror]
+         return;
+         ^~~~~~
+hashmap.c:112:8: note: declared here
+ Pair * searchMap(HashMap * map,  char * key) {
+        ^~~~~~~~~
+hashmap.c:134:17: error: 'return' with no value, in function returning non-void [-Werror]
+                 return;
+                 ^~~~~~
+hashmap.c:112:8: note: declared here
+ Pair * searchMap(HashMap * map,  char * key) {
+        ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4a93e60

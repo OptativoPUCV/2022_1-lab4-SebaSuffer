@@ -114,11 +114,12 @@ Pair * searchMap(HashMap * map,  char * key) {
 
     valorHash = hash(key, map->capacity);
 
+    if (map->buckets[valorHash]->key == NULL)
+        return;
     if (is_equal(map->buckets[valorHash]->key, key) == 1)
         {
             map->current = valorHash;
             return map->buckets[valorHash];
-            
         }
     else{
         while (map->buckets[valorHash] != NULL && map->buckets[valorHash]->key != NULL)
@@ -129,6 +130,8 @@ Pair * searchMap(HashMap * map,  char * key) {
                 return map->buckets[valorHash];
                 break;
             }
+            if (map->buckets[valorHash]->key == NULL)
+                return;
             valorHash = (1+valorHash) % map->capacity;     
         }
         return NULL;
