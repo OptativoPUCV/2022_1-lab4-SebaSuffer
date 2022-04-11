@@ -95,7 +95,6 @@ void eraseMap(HashMap * map,  char * key) {
     long valorHash, i;
     valorHash = hash(key, map->capacity);
     if (map->buckets[valorHash]->key == NULL){
-        map->size--;
         return;
     }
         
