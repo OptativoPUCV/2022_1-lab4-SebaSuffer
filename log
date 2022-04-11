@@ -364,3 +364,17 @@ hashmap.c:114:37: error: return makes pointer from integer without a cast [-Werr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 082cd37
+Sun Apr 10 23:27:26 HSP 2022: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:114:30: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+                 map->current = map->buckets[valorHash];
+                              ^
+hashmap.c:115:37: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+                 return map->current = valorHash;
+                        ~~~~~~~~~~~~~^~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3c6cc9e
