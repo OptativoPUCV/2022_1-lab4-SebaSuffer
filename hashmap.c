@@ -111,8 +111,8 @@ Pair * searchMap(HashMap * map,  char * key) {
         {
             if (is_equal(key, map->buckets[valorHash]->key) == 1)
             {
-                map->current = map->buckets[valorHash];
-                return map->current = valorHash;
+                map->current = valorHash;
+                return map->buckets[valorHash];
                 break;
             }
             valorHash = (1+valorHash) % map->capacity;     

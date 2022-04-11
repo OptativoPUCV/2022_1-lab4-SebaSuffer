@@ -378,3 +378,9 @@ hashmap.c:115:37: error: return makes pointer from integer without a cast [-Werr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 3c6cc9e
+Sun Apr 10 23:28:18 HSP 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  6|4
+total_score: 30/70
+b831db5
