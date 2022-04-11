@@ -104,14 +104,14 @@ Pair * searchMap(HashMap * map,  char * key) {
     if (map->buckets[valorHash]->key == key)
         {
             return map->buckets[valorHash];
-            map->current = map->buckets[valorHash];
+            map->current = valorHash;
         }
     else{
         while (map->buckets[valorHash] != NULL && map->buckets[valorHash]->key != NULL)
         {
             if (is_equal(key, map->buckets[valorHash]->key) == 1)
                 map->current = map->buckets[valorHash];
-                return map->buckets[valorHash];
+                return map->current = valorHash;
             valorHash = (1+valorHash) % map->capacity;     
         }
         return NULL;

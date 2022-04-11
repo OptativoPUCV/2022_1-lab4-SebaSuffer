@@ -324,3 +324,23 @@ hashmap.c:114:17: note: ...this statement, but the latter is misleadingly indent
 cc1.exe: all warnings being treated as errors
 Compilation failed
 0636b92
+Sun Apr 10 23:24:26 HSP 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:113:30: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+                 map->current = map->buckets[valorHash];
+                              ^
+hashmap.c:112:13: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+             if (is_equal(key, map->buckets[valorHash]->key) == 1)
+             ^~
+hashmap.c:114:17: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+                 return map->current = valorHash;
+                 ^~~~~~
+hashmap.c:114:37: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+                 return map->current = valorHash;
+                        ~~~~~~~~~~~~~^~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2f9a7b8
